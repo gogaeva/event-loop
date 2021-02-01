@@ -1,23 +1,25 @@
-package main
+package commands
 
 import (
 	"fmt"
 	"strconv"
+
+	. "../iface"
 )
 
 type PrintCommand struct {
-	arg string
+	Arg string
 }
 
 func (pc PrintCommand) Execute(loop Handler) {
-	fmt.Println(pc.arg)
+	fmt.Println(pc.Arg)
 }
 
 type MulCommand struct {
-	arg1, arg2 int
+	Arg1, Arg2 int
 }
 
 func (mc MulCommand) Execute(loop Handler) {
-	res := mc.arg1 * mc.arg2
-	loop.Post(&PrintCommand{arg: strconv.Itoa(res)})
+	res := mc.Arg1 * mc.Arg2
+	go loop.Post(&PrintCommand{Arg: strconv.Itoa(res)})
 }

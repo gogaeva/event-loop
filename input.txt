@@ -1,4 +1,21 @@
 print Hallo
 mul 5 10
 mul 4 20
-print Bye
+print aye
+print chinazes
+print DXM
+print MDMA
+print MDA
+print MDEA
+print LSD
+print DMT
+print 2c-b
+print 2c-i
+print 2c-c
+print DOB
+print DOM
+print DOI
+mul 232 321
+mul 333 999
+mul 311 310
+mul 1234 5678
